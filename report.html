@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Era Compounding — Weekly Intelligence Report | April 21, 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f0f4f8; font-family: 'Inter', Arial, sans-serif; font-size: 15px; color: #1a1a2e; }
+
+    .back-bar {
+      background: #0d1f35; padding: 12px 32px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .back-bar a {
+      color: #4fa8e0; text-decoration: none; font-size: 13px; font-weight: 500;
+    }
+    .back-bar a:hover { text-decoration: underline; }
+    .back-bar span { color: #5a7490; font-size: 13px; }
+
+    .wrapper { max-width: 700px; margin: 32px auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.10); }
+
+    /* HEADER */
+    .email-header {
+      background: #0d1f35; color: #fff;
+      text-align: center; padding: 40px 32px 32px;
+    }
+    .email-header .brand {
+      font-size: 26px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .email-header .report-label {
+      font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      color: #8aaac8; margin-bottom: 4px;
+    }
+    .email-header .date { font-size: 13px; color: #8aaac8; margin-bottom: 20px; }
+    .email-header .week-type {
+      display: inline-block; font-size: 22px; font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* GLANCE */
+    .glance { background: #fff; padding: 28px 40px; border-bottom: 1px solid #e8edf2; }
+    .glance-title {
+      font-size: 13px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: #0d1f35; margin-bottom: 16px;
+    }
+    .glance ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .glance li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.65; color: #2a3a4a; }
+    .glance li::before { content: "▶"; color: #0d1f35; flex-shrink: 0; margin-top: 2px; font-size: 11px; }
+
+    /* MODULE */
+    .module { border-bottom: 1px solid #e8edf2; }
+    .module-header {
+      background: #0d1f35; color: #fff;
+      padding: 14px 40px;
+    }
+    .module-header .mod-title { font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .module-header .mod-sub { font-size: 12px; color: #8aaac8; margin-top: 2px; }
+    .module-body { padding: 20px 40px; display: flex; flex-direction: column; gap: 12px; }
+
+    /* Shortage rows */
+    .shortage-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 14px 16px; border: 1px solid #e4edf5;
+      border-radius: 6px; background: #fafcff;
+    }
+    .dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; }
+    .dot.green { background: #27c940; }
+    .dot.red   { background: #e03030; }
+    .shortage-item .si-name { font-weight: 700; font-size: 14px; color: #0d1f35; margin-bottom: 4px; }
+    .shortage-item .si-detail { font-size: 13px; color: #5a7490; line-height: 1.6; }
+    .shortage-item a { color: #0a4b8c; font-size: 12px; font-weight: 500; text-decoration: none; }
+    .shortage-item a:hover { text-decoration: underline; }
+
+    /* What changed items */
+    .change-item {
+      border: 1px solid #e4edf5; border-radius: 6px;
+      overflow: hidden; margin-bottom: 4px;
+    }
+    .change-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 16px; padding: 16px 20px 12px;
+    }
+    .change-title { font-size: 15px; font-weight: 700; color: #0d1f35; line-height: 1.4; }
+    .confidence {
+      flex-shrink: 0; padding: 4px 10px; border-radius: 4px;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; background: #1eaa5c; color: #fff;
+      white-space: nowrap;
+    }
+    .change-body { padding: 0 20px 16px; font-size: 14px; color: #2a3a4a; line-height: 1.7; }
+    .change-body p { margin-bottom: 10px; }
+    .change-body strong { color: #0d1f35; }
+    .change-blockquote {
+      border-left: 3px solid #f0a500; padding: 8px 14px;
+      background: #fffbf0; color: #7a6010; font-size: 13px;
+      font-style: italic; border-radius: 0 4px 4px 0; margin: 10px 0;
+      line-height: 1.6;
+    }
+    .change-link { padding: 0 20px 16px; }
+    .change-link a { color: #0a4b8c; font-size: 13px; font-weight: 500; text-decoration: none; }
+    .change-link a:hover { text-decoration: underline; }
+
+    /* Action items */
+    .action-item {
+      border: 1px solid #e4edf5; border-radius: 6px; overflow: hidden; margin-bottom: 4px;
+    }
+    .action-top {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 20px; gap: 16px;
+    }
+    .action-title { font-size: 15px; font-weight: 700; color: #0d1f35; }
+    .urgency {
+      flex-shrink: 0; padding: 4px 12px; border-radius: 4px;
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; background: #e03030; color: #fff;
+    }
+    .action-body { padding: 0 20px 18px; font-size: 14px; color: #2a3a4a; line-height: 1.7; }
+    .action-body p { margin-bottom: 8px; }
+    .action-body strong { color: #0d1f35; }
+
+    /* Footer */
+    .report-footer {
+      background: #0d1f35; color: #5a7490;
+      text-align: center; padding: 24px 32px;
+      font-size: 12px; letter-spacing: 0.5px; line-height: 1.8;
+    }
+    .report-footer a { color: #4fa8e0; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="back-bar">
+  <a href="index.html">&#8592; Back to Portfolio</a>
+  <span>·</span>
+  <span>Sample Report — New Era Compounding Pharmacy</span>
+</div>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="email-header">
+    <div class="brand">New Era Compounding</div>
+    <div class="report-label">Weekly Intelligence Report</div>
+    <div class="date">April 21, 2026</div>
+    <div class="week-type">🤫 QUIET WEEK</div>
+  </div>
+
+  <!-- THIS WEEK AT A GLANCE -->
+  <div class="glance">
+    <div class="glance-title">⚡ This Week at a Glance</div>
+    <ul>
+      <li><strong>TOP RISK:</strong> Lidocaine Injection — Pfizer's April 2026 estimated release date for 2% Ansyr syringes has arrived with no ASHP resolution update; 0.5% 50 mL vials' March 2026 ETA also passed unresolved, threatening New Era's pain, local anesthesia, and sterile compounding input supply.</li>
+      <li><strong>TOP OPPORTUNITY:</strong> Estradiol Transdermal + Progesterone — Sandoz estradiol patch mid-April ETA passed with no ASHP resolution; progesterone capsules, injection, and vaginal insert remain on ASHP shortage list; multi-form HRT compounding demand remains elevated with no commercial resolution date.</li>
+      <li><strong>NEW THIS WEEK:</strong> Federal Register 2026-07361 (published April 16) officially confirms PCAC July 23–24, 2026 agenda: BPC-157 (free base + acetate), KPV, TB-500, and MOTs-C on Day 1; Emideltide (DSIP), Semax, and Epitalon on Day 2 — public comment docket FDA-2026-N-2979 is now open.</li>
+      <li><strong>ACTION:</strong> Audit lidocaine injection inventory today against April 2026 Pfizer Ansyr ETA expiration and identify backup suppliers; submit public comment to FDA docket FDA-2026-N-2979 supporting BPC-157 and DSIP/Semax/Epitalon inclusion before PCAC meeting.</li>
+    </ul>
+  </div>
+
+  <!-- MODULE 1: SHORTAGE RADAR -->
+  <div class="module">
+    <div class="module-header">
+      <div class="mod-title">Module 1 — Shortage Radar</div>
+      <div class="mod-sub">Active drug shortages — CEO decides relevance</div>
+    </div>
+    <div class="module-body">
+
+      <div class="shortage-item">
+        <div class="dot green"></div>
+        <div>
+          <div class="si-name">Testosterone Cypionate Injection</div>
+          <div class="si-detail">ASHP shortage active as of January 21, 2026: Pfizer Depo-Testosterone 200 mg/mL 10 mL vials on backorder with no estimated release date; Pfizer 100 mg/mL 10 mL vials available in limited supply with weekly releases; Hikma 200 mg/mL 10 mL vials had a late-January 2026 estimated release date with no confirmed resolution update.</div>
+        </div>
+      </div>
+
+      <div class="shortage-item">
+        <div class="dot green"></div>
+        <div>
+          <div class="si-name">Estradiol Transdermal System</div>
+          <div class="si-detail">ASHP shortage active: Sandoz 0.025 mg/24 hr and 0.05 mg/24 hr patches in 4-count packages were on backorder with a mid-April 2026 estimated release date that has now passed with no confirmed ASHP resolution update; Noven remains on shortage due to increased demand; Amneal and Zydus did not provide shortage reasons.</div>
+        </div>
+      </div>
+
+      <div class="shortage-item">
+        <div class="dot green"></div>
+        <div>
+          <div class="si-name">Progesterone Capsules</div>
+          <div class="si-detail">ASHP shortage page remains active (last updated October 1, 2025): Aurobindo refuses to provide availability information; Amneal and Virtus (Prometrium) have product available but shortage listing has not been resolved.</div>
+        </div>
+      </div>
+
+      <div class="shortage-item">
+        <div class="dot green"></div>
+        <div>
+          <div class="si-name">Progesterone Injection</div>
+          <div class="si-detail">ASHP shortage page active: Fresenius Kabi had shortage due to increased demand and manufacturing delays; Hikma and Teva currently have product available, but shortage listing has not been formally resolved.</div>
+        </div>
+      </div>
+
+      <div class="shortage-item">
+        <div class="dot green"></div>
+        <div>
+          <div class="si-name">Progesterone Vaginal Insert</div>
+          <div class="si-detail">ASHP shortage page active; detailed manufacturer status not publicly displayed in retrieved content, but page remains on the current shortage list.</div>
+        </div>
+      </div>
+
+      <div class="shortage-item">
+        <div class="dot green"></div>
+        <div>
+          <div class="si-name">Estradiol + Norethindrone Acetate Transdermal (Combipatch)</div>
+          <div class="si-detail">ASHP shortage page active; detailed manufacturer availability not publicly displayed in retrieved content, but page remains on the current shortage list — relevant to New Era's HRT combination compounding.</div>
+        </div>
+      </div>
+
+      <div class="shortage-item">
+        <div class="dot red"></div>
+        <div>
+          <div class="si-name">Lidocaine Injection</div>
+          <div class="si-detail">ASHP shortage active as of March 10, 2026: Pfizer 0.5% 50 mL flip-top vials had an estimated release date of March 2026 (now past); 2% lidocaine 5 mL Ansyr emergency syringes had an estimated release date of April 2026 (now at/past due); 1% 20 mL vials available in limited supply.</div>
+        </div>
+      </div>
+
+      <div class="shortage-item">
+        <div class="dot red"></div>
+        <div>
+          <div class="si-name">Penicillin G Benzathine (Bicillin-LA)</div>
+          <div class="si-detail">ASHP shortage active as of March 12, 2026: Pfizer 600,000-unit syringes on backorder with estimated release date of October 2027; 1,200,000-unit and 2,400,000-unit syringes on intermittent backorder with weekly releases; FDA-authorized imported Lentocillin available via Cost Plus Drug Company — not in New Era's portfolio but signals ongoing injectable antibiotic supply fragility.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODULE 2: WHAT CHANGED -->
+  <div class="module">
+    <div class="module-header">
+      <div class="mod-title">Module 2 — What Changed</div>
+      <div class="mod-sub">New or newly material developments only — sourced</div>
+    </div>
+    <div class="module-body">
+
+      <div class="change-item">
+        <div class="change-top">
+          <div class="change-title">PCAC July 23–24, 2026 Agenda Officially Published — Full Peptide Slate Confirmed</div>
+          <span class="confidence">High Confidence</span>
+        </div>
+        <div class="change-body">
+          <p>Federal Register notice 2026-07361 (published April 16, 2026) officially confirms the PCAC will evaluate BPC-157 (free base/acetate), KPV (free base/acetate), TB-500 (free base/acetate), and MOTs-C (free base/acetate) for 503A Bulks List inclusion on July 23; Emideltide (DSIP, free base/acetate), Semax (free base/acetate), and Epitalon (free base/acetate) are confirmed on the July 24 agenda. Public comment docket FDA-2026-N-2979 is now open.</p>
+          <p><strong>Why it matters:</strong> New Era can now target API sourcing and prescriber development for seven specific peptide formulations — including DSIP/Semax/Epitalon relevant to its Sleep line — with a confirmed PCAC review date and an open public comment docket that allows New Era to formally support inclusion.</p>
+          <div class="change-blockquote">Watch: PCAC recommendations are advisory only; FDA rulemaking following the July meeting typically takes 6–18 months before final 503A Bulks List inclusion is codified in regulation.</div>
+        </div>
+        <div class="change-link"><a href="#">Federal Register 2026-07361 | FDA PCAC Meeting Page</a></div>
+      </div>
+
+      <div class="change-item">
+        <div class="change-top">
+          <div class="change-title">Lidocaine Injection — Multiple Pfizer Release Date Deadlines Now At or Past Due</div>
+          <span class="confidence">High Confidence</span>
+        </div>
+        <div class="change-body">
+          <p>Per the ASHP shortage detail updated March 10, 2026, Pfizer's estimated release date for 0.5% lidocaine 50 mL vials was March 2026 (now elapsed) and the 2% Ansyr emergency syringes were projected for April 2026 (now due this week) — neither release has been confirmed resolved on the ASHP page.</p>
+          <p><strong>Why it matters:</strong> New Era's sterile compounding and pain management formulations depend on lidocaine injection inputs. An undetected supply gap could halt operations without warning.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODULE 3: ACTION PLAN -->
+  <div class="module">
+    <div class="module-header">
+      <div class="mod-title">Module 3 — Action Plan</div>
+      <div class="mod-sub">What New Era does this week — sorted by urgency</div>
+    </div>
+    <div class="module-body">
+
+      <div class="action-item">
+        <div class="action-top">
+          <div class="action-title">#1 — Verify Lidocaine Injection Inventory and Secure Backup Supply</div>
+          <span class="urgency">High</span>
+        </div>
+        <div class="action-body">
+          <p><strong>What:</strong> Director of Pharmacy Operations: Pull current lidocaine injection inventory (all concentrations and presentations) today and compare against 30-day projected compounding volume. Contact at least two alternative API/injectable suppliers for lidocaine 0.5% and 2% presentations. Confirm whether Pfizer April 2026 release has occurred by calling your wholesaler directly.</p>
+          <p><strong>Why now:</strong> Pfizer's April 2026 estimated release date for 2% Ansyr syringes has arrived with no confirmed ASHP resolution; the prior March 2026 ETA for 0.5% vials also passed without confirmed resolution.</p>
+          <p><strong>Risk of delay:</strong> An undetected gap in lidocaine supply would halt sterile pain-management and local anesthesia compounding operations without warning.</p>
+        </div>
+      </div>
+
+      <div class="action-item">
+        <div class="action-top">
+          <div class="action-title">#2 — Submit Public Comment to FDA Docket FDA-2026-N-2979 for PCAC Peptide Review</div>
+          <span class="urgency">High</span>
+        </div>
+        <div class="action-body">
+          <p><strong>What:</strong> Regulatory/Compliance lead: Draft and submit a public comment to FDA docket FDA-2026-N-2979 supporting 503A Bulks List inclusion for BPC-157 and, separately, for DSIP (Emideltide), Semax, and Epitalon. Include clinical use documentation and prescriber demand evidence from New Era's Puerto Rico patient population. Submit via regulations.gov well in advance of the July 23–24 PCAC meeting.</p>
+          <p><strong>Why now:</strong> The public comment docket is now open following Federal Register 2026-07361 publication. Submitting early and with clinical evidence strengthens New Era's position before the PCAC advisory vote.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="report-footer">
+    New Era Compounding Pharmacy &nbsp;·&nbsp; Weekly Intelligence Report &nbsp;·&nbsp; April 21, 2026<br>
+    Generated by AI intelligence system designed by <a href="index.html">Lucas Garcia Valdivia</a><br>
+    <span style="font-size:11px;">This is a sample report for portfolio demonstration purposes.</span>
+  </div>
+
+</div>
+</body>
+</html>
