@@ -322,11 +322,20 @@
     /* ── EMAIL PREVIEW ── */
     .email-preview {
       width: 100%; max-width: 440px;
-      border-radius: 10px; overflow: hidden;
+      border-radius: 10px;
       border: 1px solid var(--border);
       font-size: 12px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      display: flex; flex-direction: column;
+      max-height: 480px;
     }
+    .email-body {
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    .email-body::-webkit-scrollbar { width: 5px; }
+    .email-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
     .email-topbar {
       background: #1e2d3d; padding: 10px 14px;
       display: flex; align-items: center; gap: 6px;
@@ -381,6 +390,30 @@
       border: 1px solid rgba(79,168,224,0.2);
       border-radius: 6px; color: #8aaac8; line-height: 1.6;
     }
+    .email-section-title {
+      font-family: 'Space Mono', monospace; font-size: 9px;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--green); margin: 16px 0 10px;
+      padding-top: 14px; border-top: 1px solid var(--border);
+    }
+    .email-shortage-row {
+      margin-bottom: 12px; padding: 10px 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border); border-radius: 6px;
+    }
+    .email-shortage-name {
+      font-weight: 700; color: #e8f0f8; font-size: 11px;
+      margin-bottom: 4px; display: flex; align-items: center; gap: 8px;
+      flex-wrap: wrap;
+    }
+    .email-shortage-detail { color: #8aaac8; font-size: 11px; line-height: 1.5; margin-top: 4px; }
+    .email-reg-block {
+      background: rgba(79,168,224,0.06);
+      border: 1px solid rgba(79,168,224,0.15);
+      border-radius: 6px; padding: 12px;
+      color: #8aaac8; font-size: 11px; line-height: 1.7;
+    }
+    .email-reg-block strong { color: #e8f0f8; }
 
     @media (max-width: 900px) {
       .featured-card { grid-template-columns: 1fr; }
@@ -670,6 +703,40 @@
             </div>
             <div class="email-action">
               <strong>&#9654; ACTION:</strong> Audit lidocaine inventory against April 2026 Pfizer ETA and identify backup suppliers. Submit public comment to FDA docket before PCAC meeting.
+            </div>
+
+            <div class="email-section-title">&#128202; DRUG SHORTAGE TRACKER</div>
+
+            <div class="email-shortage-row">
+              <div class="email-shortage-name">Lidocaine Injection 2% (Ansyr)</div>
+              <span class="email-pill risk">CRITICAL</span>
+              <div class="email-shortage-detail">Pfizer April 2026 ETA expired unresolved. 0.5% 50mL vials also outstanding. Affects pain mgmt + sterile compounding inputs.</div>
+            </div>
+
+            <div class="email-shortage-row">
+              <div class="email-shortage-name">Estradiol Transdermal Patch (Sandoz)</div>
+              <span class="email-pill opp">OPPORTUNITY</span>
+              <div class="email-shortage-detail">Mid-April ETA passed. No ASHP resolution. Progesterone capsules, injection &amp; vaginal insert also listed. HRT compounding demand elevated.</div>
+            </div>
+
+            <div class="email-shortage-row">
+              <div class="email-shortage-name">Tirzepatide 503A (GLP-1)</div>
+              <span class="email-pill risk">MONITOR</span>
+              <div class="email-shortage-detail">FDA has NOT resolved shortage as of April 2026. Eli Lilly open letter March 12 flags compounding concerns. DOJ involvement narrows 503A pathway.</div>
+            </div>
+
+            <div class="email-shortage-row">
+              <div class="email-shortage-name">Semaglutide / Tirzepatide</div>
+              <span class="email-pill neww">REGULATORY</span>
+              <div class="email-shortage-detail">FDA April 1 guidance codifies 4 Rx/month safe harbor. DOJ involvement active. Compounding window narrowing — act on existing patient bases.</div>
+            </div>
+
+            <div class="email-section-title">&#128203; REGULATORY WATCH</div>
+            <div class="email-reg-block">
+              Federal Register <strong>2026-07361</strong> (April 16) confirms PCAC meeting July 23&#8211;24, 2026.<br><br>
+              <strong>Day 1:</strong> BPC-157 (free base + acetate), KPV, TB-500, MOTs-C<br>
+              <strong>Day 2:</strong> Emideltide (DSIP), Semax, Epitalon<br><br>
+              Public comment docket <strong>FDA-2026-N-2979</strong> is now open. Deadline before July 23.
             </div>
           </div>
         </div>
