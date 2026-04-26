@@ -11,14 +11,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #f0f4f8;
-      --bg-card:  #e4edf5;
-      --bg-hi:    #d6e8f5;
-      --text:     #0d1f35;
-      --muted:    #5a7490;
-      --green:    #0a4b8c;
-      --green-lt: #1565c0;
-      --border:   #c2d4e8;
+      --bg:       #0d1f35;
+      --bg-card:  #152a45;
+      --bg-hi:    #1a3558;
+      --text:     #e8f0f8;
+      --muted:    #8aaac8;
+      --green:    #4fa8e0;
+      --green-lt: #73bfee;
+      --border:   #1e3a5f;
       --nav-h:    68px;
     }
 
@@ -287,7 +287,7 @@
     .skill-pills { display: flex; flex-wrap: wrap; gap: 8px; }
     .skill-pill {
       padding: 6px 14px; border-radius: 99px;
-      background: var(--bg); border: 1px solid var(--border);
+      background: var(--bg-hi); border: 1px solid var(--border);
       font-size: 13px; color: var(--text);
     }
 
@@ -306,6 +306,85 @@
     }
     .cert-name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
     .cert-issuer { font-size: 13px; color: var(--muted); }
+
+    /* ── FEATURED CARD ── */
+    .featured-card {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 40px; align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--green);
+      border-radius: 12px; padding: 40px;
+      margin-bottom: 2px;
+    }
+    .featured-right { display: flex; justify-content: center; }
+
+    /* ── EMAIL PREVIEW ── */
+    .email-preview {
+      width: 100%; max-width: 440px;
+      border-radius: 10px; overflow: hidden;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .email-topbar {
+      background: #1e2d3d; padding: 10px 14px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .email-dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .email-topbar-label {
+      margin-left: 10px; font-family: 'Space Mono', monospace;
+      font-size: 10px; color: #5a7490; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .email-header {
+      background: #152a45; padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .email-subject {
+      font-weight: 700; color: #e8f0f8; font-size: 12px;
+      margin-bottom: 8px; line-height: 1.4;
+    }
+    .email-meta { font-size: 11px; color: #5a7490; margin-top: 3px; }
+    .email-label {
+      font-family: 'Space Mono', monospace; font-size: 9px;
+      letter-spacing: 1px; color: var(--green);
+      margin-right: 6px; text-transform: uppercase;
+    }
+    .email-body { background: #0f2030; padding: 14px 16px; }
+    .email-banner {
+      font-family: 'Space Mono', monospace; font-size: 9px;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--green); border-bottom: 1px solid var(--border);
+      padding-bottom: 10px; margin-bottom: 12px;
+    }
+    .email-glance {
+      font-family: 'Space Mono', monospace; font-size: 10px;
+      font-weight: 700; color: #e8f0f8; margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .email-row {
+      display: flex; gap: 8px; align-items: flex-start;
+      margin-bottom: 8px; line-height: 1.5; color: #8aaac8;
+    }
+    .email-pill {
+      flex-shrink: 0; padding: 2px 7px; border-radius: 4px;
+      font-family: 'Space Mono', monospace; font-size: 9px;
+      font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+      white-space: nowrap; margin-top: 1px;
+    }
+    .risk  { background: rgba(220,50,50,0.2);  color: #f08080; }
+    .opp   { background: rgba(50,180,100,0.2); color: #80d4a0; }
+    .neww  { background: rgba(79,168,224,0.2); color: var(--green); }
+    .email-action {
+      margin-top: 12px; padding: 10px 12px;
+      background: rgba(79,168,224,0.08);
+      border: 1px solid rgba(79,168,224,0.2);
+      border-radius: 6px; color: #8aaac8; line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .featured-card { grid-template-columns: 1fr; }
+    }
 
     /* ── LEADERSHIP ── */
     .lead-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -415,14 +494,14 @@
         <p>
           I'm a Biomedical Engineering student at Boston University (Class of 2028),
           concentrating in Machine Learning. I'm building toward a career at the
-          intersection of healthcare, technology, and strategy — where engineering
+          intersection of healthcare, technology, and strategy, where engineering
           skills meet business impact.
         </p>
         <p>
           From shadowing engineers at a biomedical device company diagnosing
           clinical analyzers, to designing AI-powered acquisition workflows
           presented directly to a CEO, I seek out work that solves real problems
-          in real environments. I'm also a certified EMT — giving me direct
+          in real environments. I'm also a certified EMT, giving me direct
           exposure to the clinical settings I aim to build for.
         </p>
         <p>
@@ -446,7 +525,7 @@
         </div>
         <div class="stat-card">
           <div class="num">2028</div>
-          <div class="label">Boston University — Class Year</div>
+          <div class="label">Boston University · Class Year</div>
         </div>
       </div>
     </div>
@@ -492,7 +571,7 @@
           </p>
         </div>
         <div class="exp-meta">
-          <div class="exp-date">June 2025 – July 2025</div>
+          <div class="exp-date">June 2025 to July 2025</div>
           <div class="exp-location">San Juan, PR</div>
         </div>
       </div>
@@ -526,7 +605,7 @@
           </p>
         </div>
         <div class="exp-meta">
-          <div class="exp-date">May 2024 – July 2024</div>
+          <div class="exp-date">May 2024 to July 2024</div>
           <div class="exp-location">San Juan, PR</div>
         </div>
       </div>
@@ -542,22 +621,66 @@
     <h2 class="section-title">What I've Built</h2>
     <hr class="divider" />
 
-    <div class="projects-grid">
-      <div class="project-card">
+    <!-- Featured: New Era -->
+    <div class="featured-card">
+      <div class="featured-left">
         <div class="project-tag">AI &amp; Healthcare <span>·</span> 2026</div>
-        <div class="project-title">CEO Drug Shortage Intelligence Initiative</div>
-        <p class="project-desc">
-          Designed an AI-assisted market intelligence workflow for the CEO of a compounding
-          pharmacy to monitor active drug shortages, identify revenue-relevant opportunities,
-          and deliver prioritized strategic actions. Integrated real-time data sources with
-          automated analysis pipelines.
+        <div class="project-title" style="font-size:28px;">CEO Drug Shortage Intelligence Initiative</div>
+        <p class="project-desc" style="font-size:15px; margin-top:16px;">
+          Built an end-to-end AI intelligence system for the CEO of New Era Compounding Pharmacy
+          that monitors live FDA drug shortages, identifies revenue opportunities, and delivers
+          a prioritized weekly briefing directly to leadership. The system pulls from real-time
+          regulatory data sources, applies automated analysis pipelines, and produces
+          executive-ready reports requiring zero manual research.
         </p>
-        <div class="project-tag" style="margin-top:16px; font-size:10px;">New Era Compounding Pharmacy</div>
+        <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="skill-pill">n8n Automation</span>
+          <span class="skill-pill">FDA Data APIs</span>
+          <span class="skill-pill">AI Summarization</span>
+          <span class="skill-pill">Executive Reporting</span>
+        </div>
       </div>
+      <div class="featured-right">
+        <div class="email-preview">
+          <div class="email-topbar">
+            <span class="email-dot" style="background:#ff5f56"></span>
+            <span class="email-dot" style="background:#ffbd2e"></span>
+            <span class="email-dot" style="background:#27c93f"></span>
+            <span class="email-topbar-label">Weekly Intelligence Report</span>
+          </div>
+          <div class="email-header">
+            <div class="email-subject">&#x1F910; QUIET WEEK &nbsp;|&nbsp; Weekly Intelligence Report &nbsp;[April 21, 2026]</div>
+            <div class="email-meta"><span class="email-label">FROM</span> lgarciavaldivia17@gmail.com</div>
+            <div class="email-meta"><span class="email-label">TO</span> CEO, New Era Compounding Pharmacy</div>
+          </div>
+          <div class="email-body">
+            <div class="email-banner">NEW ERA COMPOUNDING &nbsp;&nbsp; WEEKLY INTELLIGENCE REPORT &nbsp;&nbsp; April 21, 2026</div>
+            <div class="email-glance">&#9889; THIS WEEK AT A GLANCE</div>
+            <div class="email-row email-risk">
+              <span class="email-pill risk">TOP RISK</span>
+              <span>Lidocaine Injection &mdash; Pfizer April 2026 ETA passed with no ASHP resolution, threatening sterile compounding input supply.</span>
+            </div>
+            <div class="email-row email-opp">
+              <span class="email-pill opp">TOP OPPORTUNITY</span>
+              <span>Estradiol Transdermal + Progesterone &mdash; multi-form HRT compounding demand elevated with no commercial resolution date.</span>
+            </div>
+            <div class="email-row email-new">
+              <span class="email-pill neww">NEW THIS WEEK</span>
+              <span>Federal Register confirms PCAC July 23&#8211;24 agenda: BPC-157, KPV, TB-500, MOTs-C, Semax, Epitalon under review.</span>
+            </div>
+            <div class="email-action">
+              <strong>&#9654; ACTION:</strong> Audit lidocaine inventory against April 2026 Pfizer ETA and identify backup suppliers. Submit public comment to FDA docket before PCAC meeting.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-grid">
 
       <div class="project-card featured">
         <div class="project-tag">Robotics &amp; Embedded <span>·</span> 2025</div>
-        <div class="project-title">Deskinator — Autonomous Desk-Cleaning Robot</div>
+        <div class="project-title">Deskinator: Autonomous Desk-Cleaning Robot</div>
         <p class="project-desc">
           Led a team of engineers designing and developing an autonomous desk-cleaning robot.
           Ranked among the top designs out of 30+ competing teams while remaining well below
@@ -571,7 +694,7 @@
 
       <div class="project-card">
         <div class="project-tag">Structural Engineering <span>·</span> 2025</div>
-        <div class="project-title">JustAMoment — Truss Design Project</div>
+        <div class="project-title">JustAMoment: Truss Design Project</div>
         <p class="project-desc">
           Applied MATLAB for structural analysis to evaluate multiple truss configurations,
           optimizing for structural efficiency under strict budget and material constraints.
@@ -584,7 +707,7 @@
     <div class="projects-grid-row2">
       <div class="project-card">
         <div class="project-tag">Embedded Systems <span>·</span> 2025</div>
-        <div class="project-title">TempSafe — Temperature Alert System</div>
+        <div class="project-title">TempSafe: Temperature Alert System</div>
         <p class="project-desc">
           Developed an Arduino-based temperature monitoring and alert system using a TMP36
           sensor, digital output signaling, and embedded logic to trigger LED and buzzer
@@ -663,7 +786,7 @@
       <div class="cert-card">
         <div class="cert-icon">🎓</div>
         <div>
-          <div class="cert-name">Global Career Accelerator — Data Analytics Track</div>
+          <div class="cert-name">Global Career Accelerator, Data Analytics Track</div>
           <div class="cert-issuer">Certified by OpenAI, Intel &amp; Grammy Awards · Incoming Summer 2026</div>
         </div>
       </div>
@@ -671,7 +794,7 @@
         <div class="cert-icon">🚑</div>
         <div>
           <div class="cert-name">Emergency Medical Technician (EMT)</div>
-          <div class="cert-issuer">Certified by Boston University · 150+ Hours of Clinical Training · Sept – Dec 2025</div>
+          <div class="cert-issuer">Certified by Boston University · 150+ Hours of Clinical Training · Sept to Dec 2025</div>
         </div>
       </div>
       <div class="cert-card">
@@ -692,13 +815,13 @@
         <div class="lead-org">Kappa Sigma Mu-Psi</div>
         <div class="lead-role">Fraternity Brother</div>
         <p class="lead-desc">Directed recruitment initiatives, organizing 10+ rushing events to increase Latino membership and strengthen community presence at BU.</p>
-        <div class="lead-date">January 2025 – Present</div>
+        <div class="lead-date">January 2025 to Present</div>
       </div>
       <div class="lead-card">
         <div class="lead-org">Society of Hispanic Professional Engineers</div>
         <div class="lead-role">SHPE Member</div>
         <p class="lead-desc">Actively engaged in engineering-focused professional development and industry networking programs connecting Hispanic engineers nationwide.</p>
-        <div class="lead-date">2024 – Present</div>
+        <div class="lead-date">2024 to Present</div>
       </div>
     </div>
   </div>
