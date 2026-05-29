@@ -263,11 +263,17 @@
     .projects-grid-row2 {
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 2px; border: 1px solid var(--border); border-top: none;
-      border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;
       overflow: hidden;
     }
     .projects-grid-row2 .project-card { border-right: 1px solid var(--border); }
     .projects-grid-row2 .project-card:last-child { border-right: none; }
+
+    .projects-grid-row3 {
+      border: 1px solid var(--border); border-top: none;
+      border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;
+      overflow: hidden;
+    }
+    .projects-grid-row3 .project-card { border-right: none; }
 
     /* ── SKILLS ── */
     .skills-grid {
@@ -545,7 +551,7 @@
       </div>
       <div class="about-stats">
         <div class="stat-card">
-          <div class="num">3.4</div>
+          <div class="num">3.5</div>
           <div class="label">GPA — Dean's List (Top 30%)</div>
         </div>
         <div class="stat-card">
@@ -575,19 +581,41 @@
 
       <div class="exp-card">
         <div>
-          <div class="exp-org">V2A Consulting Firm</div>
-          <div class="exp-role">WeServe Fellow</div>
+          <div class="exp-org">New Era Compounding Pharmacy</div>
+          <div class="exp-role">Market Expansion &amp; Digital Health Strategy</div>
           <p class="exp-desc">
-            Participating in an 8-week consulting program developing and implementing
-            solutions for nonprofit management challenges spanning strategy, operations,
-            marketing, and finance. Assigned to real pro bono projects with V2A consultant
-            teams, delivering strategic support to strengthen nonprofit capacity and impact.
+            Created and presented a product planning document for a proposed physician-patient
+            digital health platform, outlining app features, user roles, lab/imaging storage,
+            wearable integrations, and medication adherence tools. Designed an AI-assisted market
+            intelligence workflow for the CEO to track drug shortages, identify revenue
+            opportunities, and prioritize strategic actions. Conducted LATAM market expansion
+            analysis comparing competitors, tax considerations, launch markets, acquisition
+            targets, and new product opportunities.
           </p>
         </div>
         <div class="exp-meta">
-          <div class="exp-date">Incoming Summer 2026</div>
+          <div class="exp-date">April 2026 to Present</div>
+          <div class="exp-location">Carolina, PR</div>
+          <span class="badge badge-green">Active</span>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div>
+          <div class="exp-org">V2A Consulting Firm</div>
+          <div class="exp-role">WeServe Fellow</div>
+          <p class="exp-desc">
+            Selected for V2A's WeServe Fellowship (4% acceptance rate), one of Puerto Rico's
+            top consulting firms, to deliver pro bono strategic support across nonprofit
+            management challenges in strategy, operations, marketing, and finance. Embedded
+            within V2A consultant teams on live client engagements, developing and implementing
+            solutions to strengthen nonprofit organizational capacity and measurable impact.
+          </p>
+        </div>
+        <div class="exp-meta">
+          <div class="exp-date">June 2026 to August 2026</div>
           <div class="exp-location">San Juan, PR</div>
-          <span class="badge badge-green">Incoming</span>
+          <span class="badge badge-green">Completed</span>
         </div>
       </div>
 
@@ -736,6 +764,19 @@
         <a class="project-link" href="docs/DiffEQ_Biology_Report.pdf" target="_blank">
           View Report <span class="arrow">&#8594;</span>
         </a>
+      </div>
+    </div>
+
+    <div class="projects-grid-row3">
+      <div class="project-card">
+        <div class="project-tag">Computational Biology <span>·</span> 2026</div>
+        <div class="project-title">Computational Blood Coagulation Modeling</div>
+        <p class="project-desc">
+          Research under Prof. Matthew Moore at Boston University exploring the mathematics
+          of blood clot formation. Built differential equation models of the coagulation
+          cascade to simulate clotting dynamics, parameter sensitivity, and the
+          balance between hemostasis and thrombosis in physiological systems.
+        </p>
       </div>
     </div>
 
